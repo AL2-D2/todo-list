@@ -15,14 +15,14 @@
         </div>
 
         <div class="sidebar-bottom">
-            <h1>YOUR PROJECTS</h1>   
+            <h1>YOUR PROJECTS</h1>
             <div class="projects-container">
                 <div class="project">
                     <img src="assets/arrow-right.svg">
                     <p class="project-name">My Project</p>
                     <button class="project-edit-btn"></button>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
 
@@ -30,14 +30,30 @@
         <div class="project-info">
             <img src="assets/work.svg">
             <h1 class="project-title-name">My Project</h1>
-            <p class="project-description">Some Description</p>
+            <p class="project-title-description">Some Description</p>
         </div>
         <div class="status-buttons">
             <button class="all-btn">All</button>
             <button class="active-btn">Active</button>
             <button class="completed-btn">Completed</button>
         </div>
-        <div class="task-container"></div>
+        <div class="task-container">
+            <h2>Tasks</h2>
+            <div class="task">
+                <button id="task-complete-btn">Complete</button>
+                
+                <p class="task-title">Suspendisse quis</p>
+                <p class="task-description">Nunc convallis arcu vel auctor accumsan.</p>
+
+                <div class="task-date-container">
+                    <img src="assets/calendar-month.svg">
+                    <span id="task-date"></span>
+                </div>
+
+                <div class="task-priority"></div>
+                <button id="task-delete-btn"></button>
+            </div>
+        </div>
         <div class="add-task-container"></div>
     </div>
 </body>
