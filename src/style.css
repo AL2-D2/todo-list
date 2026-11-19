@@ -8,6 +8,8 @@
 
 :root {
     --main-color: #f6ca92;
+    --main-color-light: #f8d5a6;
+    --main-color-bold: #f3bf7a;
     --button-color-light: #e6b26d;
     --main-text-color: rgb(108, 25, 25);
 }
@@ -32,16 +34,20 @@ button:hover {
 
 /* SIDEBAR SECTION */
 
+/* SIDEBAR TOP */
+
 .sidebar {
     display: grid;
     grid-template-rows: 2fr 5fr;
-    gap: 50px;
+    gap: 30px;
     padding: 35px;
 }
 
 .sidebar-top {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 25px;
 }
 
@@ -65,5 +71,72 @@ button:hover {
 }
 
 .sidebar-logo {
-    width: 75px;
+    width: 100px;
+}
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-bottom>h2 {
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.sidebar-bottom>h2::after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid var(--main-text-color);
+}
+
+.projects-container {
+    display: grid;
+    grid-auto-rows: minmax(50px, 100px);
+    gap: 20px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color-light);
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.project>div {
+    display: flex;
+    align-items: center;
+}
+
+.project-edit-btn {
+    background-color: inherit;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.project-edit-btn:hover {
+    background-color: var(--main-color-bold);
+}
+
+.project-name {
+    font-size: 1.1rem;
+}
+
+.project-list-marker {
+    width: 25px;
 }
