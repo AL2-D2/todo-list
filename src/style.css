@@ -143,14 +143,26 @@ button:hover {
 
 /* MAIN */
 
-main{
-    display:flex;
+main {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-main > *{
+main>* {
     width: 100%;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-title-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
