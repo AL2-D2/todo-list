@@ -281,6 +281,7 @@ main>* {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    gap: 25px;
 }
 
 #add-task-form div {
@@ -292,6 +293,11 @@ main>* {
 
 .wide-input {
     padding: 15px 30px 15px 30px;
+}
+
+.input {
+    border: 1px solid rgba(128, 128, 128, 0.419);
+    border-radius: 5px;
 }
 
 .task-container svg {
