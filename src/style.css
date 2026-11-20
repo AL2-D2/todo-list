@@ -11,7 +11,11 @@
     --main-color-light: #f8d5a6;
     --main-color-bold: #f3bf7a;
     --button-color-light: #e6b26d;
+    --button-color-bold: #e6a24a;
     --main-text-color: rgb(108, 25, 25);
+    --main-text-color-pale: rgba(108, 25, 25, 0.555);
+    --intense-white: #dbdbdb;
+    --pale-white: #dbdbdb92;
 }
 
 body {
@@ -30,6 +34,12 @@ p {
 
 button:hover {
     cursor: pointer;
+}
+
+.project-schedule-amblem,
+.project-amblem,
+.project-list-marker {
+    color: var(--main-text-color);
 }
 
 /* SIDEBAR SECTION */
@@ -155,6 +165,8 @@ main>* {
     width: 100%;
 }
 
+/* PROJECT-INFO */
+
 .project-info {
     display: flex;
     flex-direction: column;
@@ -165,4 +177,32 @@ main>* {
     display: flex;
     gap: 15px;
     align-items: center;
+}
+
+/* STATUS-BUTTONS */
+
+.status-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.status-buttons button {
+    padding: 15px;
+    width: max(10%, 110px);
+    border-radius: 20px;
+    border-color: var(--intense-white);
+    border-style: solid;
+    background-color: var(--main-text-color);
+    color: var(--intense-white);
+    transition: all 0.2s ease;
+}
+
+.status-buttons button:hover {
+    color: var(--main-text-color-pale);
+    background-color: var(--pale-white);
+    border-color: var(--main-text-color-pale);
+}
+
+.project-amblem {
+    width: 55px;
 }
