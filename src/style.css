@@ -246,6 +246,12 @@ main>* {
     justify-content: flex-end;
 }
 
+#task-complete-btn,
+#task-delete-btn {
+    background-color: inherit;
+    border: inherit;
+}
+
 .task-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -279,4 +285,8 @@ main>* {
 
 .wide-input {
     padding: 15px 30px 15px 30px;
+}
+
+.task-container svg {
+    width: 25px;
 }
