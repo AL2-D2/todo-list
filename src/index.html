@@ -68,18 +68,22 @@
         <div class="task-container">
             <h2>Tasks</h2>
             <div class="task">
-                <button id="task-complete-btn">Complete</button>
-
-                <p class="task-title">Suspendisse quis</p>
-                <p class="task-description">Nunc convallis arcu vel auctor accumsan.</p>
-
-                <div class="task-date-container">
-                    <img class="project-schedule-amblem" src="assets/calendar-month.svg">
-                    <span id="task-date"></span>
+                <div class="task-left-container">
+                    <button id="task-complete-btn">Complete</button>
+                    <div class="task-description-container">
+                        <p class="task-title">Suspendisse quis</p>
+                        <p class="task-description">Nunc convallis arcu vel auctor accumsan.</p>
+                    </div>
                 </div>
+                <div class="task-right-container">
+                    <div class="task-date-container">
+                        <img class="project-schedule-amblem" src="assets/calendar-month.svg">
+                        <span id="task-date"></span>
+                    </div>
 
-                <div class="task-priority"></div>
-                <button id="task-delete-btn"></button>
+                    <div class="task-priority">High</div>
+                    <button id="task-delete-btn">Delete</button>
+                </div>
             </div>
         </div>
         <div class="add-task-container">

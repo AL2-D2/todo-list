@@ -15,6 +15,7 @@
     --main-text-color: rgb(108, 25, 25);
     --main-text-color-pale: rgba(108, 25, 25, 0.555);
     --intense-white: #dbdbdb;
+    --light-white: rgb(242, 242, 242);
     --pale-white: #dbdbdb92;
 }
 
@@ -205,4 +206,50 @@ main>* {
 
 .project-amblem {
     width: 55px;
+}
+
+/* TASK-CONTAINER */
+
+.add-task-container,
+.task-container {
+    border-radius: 25px;
+}
+
+.project-schedule-amblem {
+    width: 20px;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--light-white);
+    padding: 35px;
+}
+
+.task-container>h2 {
+    font-size: 2.6rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-left-container {
+    width: 30%;
+    display: flex;
+    gap: max(15%, 55px);
+}
+
+.task-right-container {
+    width: 60%;
+    display: flex;
+    gap: max(17%, 145px);
+    justify-content: flex-end;
+}
+
+.task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
