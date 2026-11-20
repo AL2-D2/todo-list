@@ -140,3 +140,17 @@ button:hover {
 .project-list-marker {
     width: 25px;
 }
+
+/* MAIN */
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+main > *{
+    width: 100%;
+}
