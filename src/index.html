@@ -119,8 +119,37 @@
                 </div>
             </form>
             <button id="add-task-btn">+ Add Task</button>
-        </div> <!-- add modal or dialog here -->
+        </div>
     </main>
+
+    <div id="add-project-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <form id="new-project-form">
+                <div>
+                    <img>
+                    <div>
+                        <h1>New Project</h1>
+                        <p>Give your project a name and description.</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="project-name-input">Project Name</label>
+                    <input id="project-name-input" type="text">
+                </div>
+                <div>
+                    <label for="project-description-input">Description</label>
+                    <textarea id="project-description-input"></textarea>
+                </div>
+            </form>
+            <div class="project-creation-buttons">
+                <button id="cancel-new-project">Cancel</button>
+                <button id="create-new-project" type="submit" form="new-project-form">Create Project</button>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
