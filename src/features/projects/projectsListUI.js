@@ -1,10 +1,10 @@
 import projectListMarkerIcon from "../../assets/project-list-marker.svg"
 
-export function renderProjectList(getProjects) {
+export function renderProjectList(projects, activeProjectId, onSelectProject) {
     const projectsContainer = document.querySelector(".projects-container");
     projectsContainer.innerHTML = "";
 
-    for (const project of getProjects) {
+    for (const project of projects) {
 
         const projectDiv = document.createElement("div");
         projectDiv.classList.add("project");
@@ -27,6 +27,14 @@ export function renderProjectList(getProjects) {
         projectName.classList.add("project-name");
 
         projectName.innerText = project.name;
+
+        if (project.id === activeProjectId) {
+            projectDiv.classList.add("active");
+        }
+
+        projectDiv.addEventListener("click", () => {
+            onSelectProject(project.id);
+        });
 
         div.append(projectListMarker, projectName);
     }
