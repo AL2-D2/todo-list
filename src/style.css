@@ -130,6 +130,12 @@ button:hover {
     background-color: var(--main-color-light);
     padding: 25px;
     border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.project:hover {
+    cursor: pointer;
+    background-color: var(--main-color-bold);
 }
 
 .project>div {
@@ -149,7 +155,7 @@ button:hover {
 }
 
 .project-edit-btn:hover {
-    background-color: var(--main-color-bold);
+    background-color: var(--main-color);
 }
 
 .project-name {
