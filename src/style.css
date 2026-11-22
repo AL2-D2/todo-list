@@ -45,6 +45,10 @@ button:hover {
     color: var(--main-text-color);
 }
 
+.flex-visible {
+    display: flex !important;
+}
+
 /* SIDEBAR SECTION */
 
 /* SIDEBAR TOP */
