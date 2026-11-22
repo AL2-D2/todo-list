@@ -1,3 +1,4 @@
+import { renderProjectContent } from "./projectContentUI.js";
 export function initNewProjectModal(onCreateProject) {
     const openBtn = document.querySelector("#new-project-btn");
     const cancelBtn = document.querySelector("#cancel-new-project");
