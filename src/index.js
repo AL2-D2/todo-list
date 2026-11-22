@@ -1,4 +1,11 @@
 import "./style.css";
-import { initNewProjectModal } from "./projects/newProjectModal.js";
+import { initNewProjectModal } from "./features/projects/newProjectModal.js";
+import { createProject, getProjects } from "./features/projects/project.js";
+import { renderProjectList } from "./features/projects/projectsListUI.js";
 
-initNewProjectModal();
+function handleNewProject(project) {
+    createProject(project.name, project.description);
+    renderProjectList(getProjects());
+}
+
+initNewProjectModal(handleNewProject);
