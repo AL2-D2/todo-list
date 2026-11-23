@@ -1,9 +1,14 @@
 export class Task {
+    isCompleted = false;
     constructor(name, description = "", deadline, priority) {
         this.name = name;
         this.description = description;
         this.deadline = deadline;
         this.priority = priority;
+    }
+
+    toggleComplete() {
+        this.isCompleted = !this.isCompleted;
     }
 }
 

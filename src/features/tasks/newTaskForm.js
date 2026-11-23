@@ -11,7 +11,7 @@ export function initNewTaskForm(onCreateTask) {
         const priority = document.querySelector("#input-task-priority").value;
 
         const date = document.querySelector("#input-task-date").value;
-        const formattedDate = format(new Date(date), "d/MMM/y");
+        const formattedDate = format(new Date(date), "d/MMM/yyyy");
 
         onCreateTask({ name, description, formattedDate, priority });
         form.reset();
