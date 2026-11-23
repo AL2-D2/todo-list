@@ -49,8 +49,12 @@ button:hover {
     display: flex !important;
 }
 
-.no-project{
-    justify-content: flex-start !important; 
+.no-project {
+    justify-content: flex-start !important;
+}
+
+.no-display {
+    display: none !important;
 }
 
 /* SIDEBAR SECTION */

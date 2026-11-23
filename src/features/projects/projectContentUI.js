@@ -10,38 +10,24 @@ function loadNoProjectContentUI() {
                 <h1 class="project-title-name">No Project Selected</h1>
             </div>
             <p class="project-title-description"></p>
-        </div>        
-            <h1>Create a new one to get started.</h1>`;
-}
-
-function loadProjectContentUI(project) {
-
-    const main = document.querySelector("main");
-    main.classList.remove("no-project");
-    main.innerHTML = `<div class="project-info">
-            <div class="project-title-container">
-                <img class="project-amblem" src="${projectIcon}">
-                <h1 class="project-title-name"></h1>
-            </div>
-            <p class="project-title-description"></p>
-        </div>
-        <div class="status-buttons">
+        </div>   
+        <div class="status-buttons no-display">
             <button class="all-btn">All</button>
             <button class="active-btn">Active</button>
             <button class="completed-btn">Completed</button>
         </div>
-        <div class="task-container">
+        <div class="task-container no-display">
             <h2 class="title">Tasks</h2>
-            <div class="task">
+            <div class="task no-display">
                 <div class="task-left-container">
-                    <button id="task-complete-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"
+                    <button id="task-complete-btn" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"
                             height="40px" width="40px" fill="#6c1919">
                             <path
                                 d="M20,36.67q-3.43,0-6.47-1.31T8.22,31.78T4.65,26.47T3.33,20q0-3.46 1.31-6.5T8.22,8.21t5.31-3.56T20,3.33q3.46,0 6.5,1.31t5.29,3.56t3.56,5.29T36.67,20q0,3.43-1.31,6.47t-3.56,5.31T26.5,35.35T20,36.67Zm0-2.78q5.81,0 9.85-4.06T33.89,20q0-5.81-4.04-9.85T20,6.11q-5.78,0-9.83,4.04T6.11,20q0,5.78 4.06,9.83T20,33.89Z" />
                         </svg></button>
                     <div class="task-description-container">
-                        <p class="task-title">Suspendisse quis</p>
-                        <p class="task-description">Nunc convallis arcu vel auctor accumsan.</p>
+                        <p class="task-title"></p>
+                        <p class="task-description"></p>
                     </div>
                 </div>
                 <div class="task-right-container">
@@ -58,8 +44,8 @@ function loadProjectContentUI(project) {
                         </svg></button>
                 </div>
             </div>
-        </div>
-        <div class="add-task-container">
+        </div> 
+        <div class="add-task-container no-display">
             <h2 class="title">Add a New Task</h2>
             <form id="add-task-form">
                 <div>
@@ -84,10 +70,29 @@ function loadProjectContentUI(project) {
                 </div>
             </form>
             <button id="add-task-btn">+ Add Task</button>
-        </div>`;
+        </div>    
+            <h1 class="no-project-description">Create a new one to get started.</h1>`;
+
+    main.querySelector(".status-buttons").classList.add("no-display");
+    main.querySelector(".task-container").classList.add("no-display");
+    main.querySelector(".add-task-container").classList.add("no-display");
+
+    main.querySelector(".no-project-description").classList.remove("no-display");
+}
+
+function loadProjectContentUI(project) {
+
+    const main = document.querySelector("main");
+    main.classList.remove("no-project");
+
+    main.querySelector(".status-buttons").classList.remove("no-display");
+    main.querySelector(".task-container").classList.remove("no-display");
+    main.querySelector(".add-task-container").classList.remove("no-display");
 
     main.querySelector(".project-title-name").textContent = project.name;
     main.querySelector(".project-title-description").textContent = project.description;
+
+    main.querySelector(".no-project-description").classList.add("no-display");
 }
 
 export function renderProjectContent() {
