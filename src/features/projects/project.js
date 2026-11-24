@@ -30,6 +30,10 @@ export function createProject(name, description) {
     activeProjectId = project.id;
 }
 
+export function removeProject(project) {
+    projects.splice(projects.indexOf(project), 1);
+}
+
 export function getProjects() {
     return [...projects];
 }

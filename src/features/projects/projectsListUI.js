@@ -17,7 +17,21 @@ export function renderProjectList(projects, activeProjectId, onSelectProject) {
         projectEditButton.classList.add("project-edit-btn");
         projectEditButton.innerText = "...";
 
-        projectDiv.append(div, projectEditButton);
+        const dropdownMenu = document.createElement("div");
+        dropdownMenu.classList.add("dropdown-menu");
+        dropdownMenu.classList.add("no-display");
+
+        const dropdownEditBtn = document.createElement("button");
+        dropdownEditBtn.innerText = "EDIT";
+        const dropdownDeleteBtn = document.createElement("button");
+        dropdownDeleteBtn.innerText = "DELETE";
+
+        dropdownEditBtn.id = "edit-project-btn";
+        dropdownDeleteBtn.id = "delete-project-btn";
+
+        dropdownMenu.append(dropdownEditBtn, dropdownDeleteBtn);
+
+        projectDiv.append(div, projectEditButton, dropdownMenu);
 
         const projectListMarker = document.createElement("img");
         const projectName = document.createElement("p");
@@ -32,7 +46,10 @@ export function renderProjectList(projects, activeProjectId, onSelectProject) {
             projectDiv.classList.add("active");
         }
 
-        projectDiv.addEventListener("click", () => {
+        projectDiv.addEventListener("click", (e) => {
+            if (e.target.closest(".project-edit-btn") || e.target.closest(".dropdown-menu")) {
+                return;
+            }
             onSelectProject(project.id);
         });
 

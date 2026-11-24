@@ -46,11 +46,37 @@
                 </div>
             </form>
             <div class="project-creation-buttons">
-                <button id="cancel-new-project">Cancel</button>
+                <button type="button" id="cancel-new-project">Cancel</button>
                 <button id="create-new-project" type="submit" form="new-project-form">Create Project</button>
             </div>
         </div>
 
+    </div>
+
+    <div id="edit-project-modal" class="modal">
+        <div class="modal-content">
+            <form id="edit-project-form">
+                <div>
+                    <img>
+                    <div>
+                        <h1>Edit Project</h1>
+                        <p>Edit your project's name and description.</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="edit-project-name-input">Project Name</label>
+                    <input id="edit-project-name-input" type="text">
+                </div>
+                <div>
+                    <label for="edit-project-description-input">Description</label>
+                    <textarea id="edit-project-description-input"></textarea>
+                </div>
+            </form>
+            <div class="project-creation-buttons">
+                <button type="button" id="cancel-project-btn">Cancel</button>
+                <button id="save-edit-project-btn" type="submit" form="edit-project-form">Save Changes</button>
+            </div>
+        </div>
     </div>
 </body>
 

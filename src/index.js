@@ -1,5 +1,5 @@
 import "./style.css";
-import { initNewProjectModal } from "./features/projects/newProjectModal.js";
+import { initNewProjectModal, initEditProjectModal } from "./features/projects/projectModal.js";
 import { createProject, getProjects, getActiveProject, setActiveProject } from "./features/projects/project.js";
 import { renderProjectList } from "./features/projects/projectsListUI.js";
 import { renderProjectContent } from "./features/projects/projectContentUI.js";
@@ -31,5 +31,7 @@ function refreshUI() {
 }
 initNewProjectModal(handleNewProject);
 refreshUI();
+
+initEditProjectModal(getActiveProject, refreshUI);
 
 initNewTaskForm(handleNewTask);
