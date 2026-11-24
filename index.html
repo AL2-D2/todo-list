@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo-container">
+                <img class="sidebar-logo" src="02a16fd81fc01ec70310.png">
+                <h1>TODO</h1>
+            </div>
+            <button id="new-project-btn">+ New project</button>
+        </div>
+
+        <div class="sidebar-bottom">
+            <h2>YOUR PROJECTS</h2>
+            <div class="projects-container"></div>
+        </div>
+    </div>
+
+    <main></main>
+
+    <div id="add-project-modal" class="modal">
+
+        <div class="modal-content">
+            <form id="new-project-form">
+                <div>
+                    <img>
+                    <div>
+                        <h1>New Project</h1>
+                        <p>Give your project a name and description.</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="project-name-input">Project Name</label>
+                    <input id="project-name-input" type="text">
+                </div>
+                <div>
+                    <label for="project-description-input">Description</label>
+                    <textarea id="project-description-input"></textarea>
+                </div>
+            </form>
+            <div class="project-creation-buttons">
+                <button type="button" id="cancel-new-project">Cancel</button>
+                <button id="create-new-project" type="submit" form="new-project-form">Create Project</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="edit-project-modal" class="modal">
+        <div class="modal-content">
+            <form id="edit-project-form">
+                <div>
+                    <img>
+                    <div>
+                        <h1>Edit Project</h1>
+                        <p>Edit your project's name and description.</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="edit-project-name-input">Project Name</label>
+                    <input id="edit-project-name-input" type="text">
+                </div>
+                <div>
+                    <label for="edit-project-description-input">Description</label>
+                    <textarea id="edit-project-description-input"></textarea>
+                </div>
+            </form>
+            <div class="project-creation-buttons">
+                <button type="button" id="cancel-project-btn">Cancel</button>
+                <button id="save-edit-project-btn" type="submit" form="edit-project-form">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
